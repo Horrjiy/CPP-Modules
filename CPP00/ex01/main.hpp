@@ -5,13 +5,4 @@
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 
-enum contactfields
-{
-	FNAME,
-	LNAME,
-	NICK,
-	PHONENU,
-	SECRET
-};
-
 #endif /* MAIN_HPP */
