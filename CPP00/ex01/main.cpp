@@ -58,15 +58,16 @@ void search(Contact *information)
 	/* search */
 	std::string str;
 	std::cout << "enter index of a contact (1-8)" << std::endl;
-	if(!std::getline(std::cin, str))
+	if (!std::getline(std::cin, str))
 		exit(1);
 	int i = std::atoi(str.c_str());
 	if (i < 1 || i > 8 || information[i - 1].getindex() == 0)
 		return (std::cout << "invalid index!" << std::endl, (void)0);
-	std::cout << "first name:   " << information[i - 1].getfname() << std::endl;
-	std::cout << "last name:    " << information[i - 1].getlname() << std::endl;
-	std::cout << "nickname:     " << information[i - 1].getnick() << std::endl;
-	std::cout << "phone number: " << information[i - 1].getphonenum() << std::endl;
+	std::cout << "first name:		" << information[i - 1].getfname() << std::endl;
+	std::cout << "last name:		" << information[i - 1].getlname() << std::endl;
+	std::cout << "nickname:			" << information[i - 1].getnick() << std::endl;
+	std::cout << "phone number:		" << information[i - 1].getphonenum() << std::endl;
+	std::cout << "darkest secret:	" << information[i - 1].getsecret() << std::endl;
 	std::cout << std::endl;
 }
 
@@ -79,7 +80,7 @@ int main(void)
 	{
 		std::cout << "enter ADD, SEARCH or EXIT" << std::endl;
 		std::string str;
-		if(!std::getline(std::cin, str))
+		if (!std::getline(std::cin, str))
 			exit(1);
 		if (str == "EXIT")
 			exit(0);
