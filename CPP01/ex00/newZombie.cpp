@@ -2,5 +2,9 @@
 
 Zombie *newZombie(std::string name)
 {
-	new Zombie(name);
+	Zombie *temp = new Zombie();
+	if (!temp)
+		return (NULL);
+	(*temp).setname(name);
+	return (temp);
 }
