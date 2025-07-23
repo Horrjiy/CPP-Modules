@@ -20,19 +20,19 @@ static int testForm()
         std::cout << "\033[31mGIVE A TYPE: \033[0m";
         if (!std::getline(std::cin, name_string))
             return (std::cerr << "Stopped.\n", 69);
-        
+
         A1 = someRandomIntern.makeForm(name_string, some_string);
-        if(!A1)
-            return(69);
+        if (!A1)
+            return (69);
         std::cout << *A1 << std::endl;
 
         // Initialize Bureaucrat
         std::cout << "\033[31mGIVE A GRADE(1-150): \033[0m";
         if (!std::getline(std::cin, some_string))
-            return (std::cerr << "Stopped.\n", 69);
+            return (delete A1, std::cerr << "Stopped.\n", 69);
         std::cout << "\033[31mWRITE A NAME: \033[0m";
         if (!std::getline(std::cin, name_string))
-            return (std::cerr << "Stopped.\n", 69);
+            return (delete A1, std::cerr << "Stopped.\n", 69);
         Bureaucrat Kek(name_string, std::stoi(some_string));
         std::cout << Kek;
 
